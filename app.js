@@ -10,7 +10,7 @@ const chat = [];
 const users = [];
 const products = [
   {
-    name: 'Camara',
+    name: 'Cámara',
     price: 199000,
     image:
       'https://cdn3.iconfinder.com/data/icons/spring-2-1/30/Camera-512.png',
@@ -28,13 +28,6 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
   res.render('pages/index.ejs', { products, title: 'Productos' });
 });
-
-// app.post('/', (req, res) => {
-//   console.log('Body: ', req.body);
-//   products.push({ ...req.body });
-
-//   res.render('pages/index.ejs', { products, title: 'Productos' });
-// });
 
 app.get('/chat', (req, res) => {
   res.sendFile(__dirname + '/public/chat.html');

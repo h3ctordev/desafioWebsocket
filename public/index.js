@@ -89,13 +89,3 @@ socket.on('products-inner', (products) => {
   ].join(' ');
   document.getElementById('products-table').innerHTML = html;
 });
-
-// socket.on('usersList', (users) => {
-//   const listUsers = Object.values(users)
-//     .map(
-//       (user) => `<li clase="m-1 border-button"> <strong>${user}</strong></li>`
-//     )
-//     .join(' ');
-
-//   document.getElementById('users-list').innerHTML = listUsers;
-// });

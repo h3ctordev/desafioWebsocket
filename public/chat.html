@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <title>Chat</title>
+  </head>
+  <body>
+    <div class="container mt-3 bg-light rounded p-3">
+      <h1 class="text-center">Chat Clientes</h1>
+      <div class="row p-3">
+        <div class="col-md-9 border mb-3">
+          <div class="overflow-auto position-relative" style="height: 300px">
+            <div>
+              <p
+                class="small p-1 mb-1"
+                style="word-wrap: break-all"
+                id="messages"
+              ></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="overflow-auto position-relativ" style="height: 300px">
+            <ul class="list-unstyled mb-0" id="users-list"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="row p-3" style="justify-content: space-between">
+        <input
+          type="email"
+          id="nombre"
+          placeholder="Email"
+          class="col-md-2 ml-1"
+        />
+        <input type="text" id="message" placeholder="Atr..." class="col-md-6" />
+        <button type="submit" onclick="sendMessage()" class="col-md-3 mr-1">
+          enviar
+        </button>
+      </div>
+    </div>
+    <script
+      src="https://cdn.socket.io/4.5.0/socket.io.min.js"
+      integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

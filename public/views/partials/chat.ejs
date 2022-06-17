@@ -1,0 +1,33 @@
+<h1 class="text-center">Centro de mensajes</h1>
+<div class="row p-3">
+  <input
+    type="email"
+    id="email-input"
+    placeholder="nombre@mail.cl"
+    class="form-control"
+  />
+</div>
+<div class="row p-3">
+  <div class="col-12 border mb-3">
+    <div class="overflow-auto position-relative" style="height: 300px">
+      <div>
+        <p
+          class="small p-1 mb-1"
+          style="word-wrap: break-all"
+          id="messages"
+        ></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row p-3" style="justify-content: space-between">
+  <input
+    type="text"
+    id="message"
+    placeholder="Mensaje..."
+    class="form-control col-9 ml-1"
+  />
+  <button type="submit" onclick="sendMessage()" class="btn btn-primary col-2">
+    enviar
+  </button>
+</div>
